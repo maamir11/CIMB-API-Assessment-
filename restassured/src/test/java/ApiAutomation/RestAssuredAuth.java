@@ -1,6 +1,7 @@
 //This class is the test case of api scenario which inherits functionalities of the base class
 
 package ApiAutomation;
+import org.testng.Assert;
 
 //import static io.restassured.RestAssured.get;
 
@@ -21,6 +22,7 @@ public class RestAssuredAuth extends RestAssuredBaseClass
 		.getStatusCode();
 		
 		System.out.println("Response code from the server is "+code);
+		Assert.assertEquals(code, 200);
 		
 					
 	}
